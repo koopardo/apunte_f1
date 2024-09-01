@@ -1,0 +1,113 @@
+\documentclass[a4paper,12pt]{report}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+%\directlua{ require("drawboxes")}
+\usepackage{float}
+\usepackage{jheppub} % for details on the use of the package, please
+                     % see the JHEP-author-manual
+
+\usepackage[T1]{fontenc} % if needed
+\usepackage{amsfonts}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[labelsep=period]{caption} %para que  "Figura" no tenga 2 puntos finales
+%\usepackage{caption}
+\usepackage{lmodern}
+\usepackage[spanish,es-lcroman,es-nosectiondot]{babel} %Para que en vez de Figure use Figura. Las demas opciones sacan 
+%los puntos finales de la numeracion en el indice
+\usepackage{wrapfig} % para poner imagenes al costado
+%\usepackage{amssymb} % para el simbolo de conjunto de numeros
+%\usepackage{hyperref}
+\usepackage{graphicx}
+%\usepackage{enumerate} % para colocar listas
+\usepackage{enumitem} % para sacar el espacio en las listas
+%\usepackage{makecell} % usado en el prafacio para los nombres a lo ultimo
+\usepackage{multicol} % para dos columnas en un parrafo
+%\usepackage{tikz} % para las flechas
+%\usepackage{adjustbox} %para mover minipage a la derecha
+%\usepackage{amsmath} %para usar align
+\usepackage{subdepth} % para que los subindices tengan todos la misma posicion
+%\usepackage{float} %para las imagenes
+%\usepackage[english]{babel}
+%\usepackage{caption} % para sacar los dos puntos despues de Figure X
+%\usepackage{geometry} % para sacar el espacio de margenes
+\usepackage{capt-of} % El entorno \captionsetup del paquete capt-of permite manejar las leyendas de las figuras sin 
+%necesidad de utilizar un entorno flotante, garantizando que la figura permanezca dentro del entorno example.
+\usepackage{float} % para poner figuras no desfasadas dentro del entorno example
+\usepackage{cases} %para enumerar las ecuaciones con llaves
+
+\def\para{\paragraph{}} %para un salto de linea mas grande
+
+%%%%%%%%%%%%%%
+
+
+
+\title{\boldmath Notas de física 1}
+
+
+%% %simple case: 2 authors, same institution
+%% \author{A. Uthor}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+% more complex case: 4 authors, 3 institutions, 2 footnotes
+\author{Claudia Giribet}
+
+% The "\note" macro will give a warning: "Ignoring empty anchor..."
+% you can safely ignore it.
+
+\affiliation{Departamento de Física,\\Facultad de Ciencias Exactas y Naturales, \\Universidad de Buenos Aires.}
+
+% e-mail addresses: one for each author, in the same order as the authors
+\emailAdd{first@one.univ}
+
+
+
+
+
+%\abstract{Abstract...}
+
+
+
+%\AtBeginShipout {\directlua{drawboxes.visual_debug()}}
+\begin{document}
+\maketitle
+\flushbottom
+
+\input{chapters/chapter-01.tex}
+
+
+
+
+
+% The bibliography will probably be heavily edited during typesetting.
+% We'll parse it and, using the arxiv number or the journal data, will
+% query inspire, trying to verify the data (this will probalby spot
+% eventual typos) and retrive the document DOI and eventual errata.
+% We however suggest to always provide author, title and journal data:
+% in short all the informations that clearly identify a document.
+
+\begin{thebibliography}{99}
+
+\bibitem{a}
+Author, \emph{Title}, \emph{J. Abbrev.} {\bf vol} (year) pg.
+
+\bibitem{b}
+Author, \emph{Title},
+arxiv:1234.5678.
+
+\bibitem{c}
+Author, \emph{Title},
+Publisher (year).
+
+
+% Please avoid comments such as "For a review'', "For some examples",
+% "and references therein" or move them in the text. In general,
+% please leave only references in the bibliography and move all
+% accessory text in footnotes.
+
+% Also, please have only one work for each \bibitem.
+\end{thebibliography}
+\end{document}
+
